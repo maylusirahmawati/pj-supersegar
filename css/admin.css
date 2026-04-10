@@ -1,0 +1,56 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+.dashboard-container{
+    display: flex;
+}
+
+.sidebar{
+    width: 300px;
+    height: 100vh;
+    background: #03695E;
+    padding: 20px;
+    position: fixed;
+    left: 0;
+    top: 0;
+}
+
+.sidebar h2{
+    color: white;
+    text-align: center;
+    font-family: 'Times New Roman', Times, serif;
+    margin-bottom: 30px;
+    font-size: 24px;
+}
+
+.sidebar ul{
+    list-style: none;
+}
+
+.sidebar ul li{
+    margin: 15px 0;
+}
+
+.sidebar ul li a{
+    text-decoration: none;
+    color: white;
+    display: block;
+    padding: 12px 20px;
+    border-radius: 8px;
+    transition: 0.3s;
+    background: rgba(255,255,255,0.05);
+}
+
+.sidebar ul li a:hover{
+    background: #239DCA;
+    transform: translateX(5px);
+}
+
+.sidebar ul li a.active{
+    background: #239DCA;
+    font-weight: bold;
+}
