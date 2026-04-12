@@ -16,9 +16,9 @@ $produk = $result->fetch_assoc();
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Admin Product</title>
     <link rel="icon" type="image/png" href="picture/logo.png">
+    <link href="https://fonts.googleapis.com/css2?family=League+Gothic&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
-    <link rel="stylesheet" href="css/admin_produkk.css">
-    <link rel="stylesheet" href="css/admin_styles.css">
+    <link rel="stylesheet" href="css/admin_menu.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
 </head>
 <body>
@@ -26,7 +26,7 @@ $produk = $result->fetch_assoc();
     <div class="wrapper">
         <form action="product.php" method="post" enctype="multipart/form-data">
             <h2>Add Product</h2>
-            <div class="card">
+            <div class="card-product">
                 <input type="text" name="nama" id="nama" placeholder="input nama produk......"><br><br>
                 <input type="number" name="harga" id="harga" placeholder="input harga......"><br><br>
                 <input type="deskripsi" name="deskripsi" id="deskripsi" placeholder="input deskripsi......"><br><br>
@@ -45,12 +45,11 @@ $produk = $result->fetch_assoc();
                 while($fetch_product = mysqli_fetch_assoc($select_product)){
             ?>
 
-            <div class="box">
+            <div class="box-product">
                 <img src="uploads/<?php echo $fetch_product['gambar']; ?>" alt=""><br>
                 <div class="name"><?php echo $fetch_product['nama']; ?></div> 
                 <div class="deskripsi"><?php echo $fetch_product['deskripsi']; ?></div> 
-                <div class="price">Rp<?php echo $fetch_product['harga'];?>.000</div><br>
-                <br>
+                <div class="price">Rp<?php echo $fetch_product['harga'];?>.000</div>
                 <a href="edit_form.php?id=<?php echo $fetch_product['id']; ?>">Edit</a>
                 <a href="delete.php?id=<?php echo $fetch_product['id']; ?>">Delete</a>
             </div>
