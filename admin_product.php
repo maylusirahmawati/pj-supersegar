@@ -25,7 +25,7 @@ $produk = $result->fetch_assoc();
     <h1 class="title">PRODUCT</h1>
     <div class="wrapper">
         <form action="product.php" method="post" enctype="multipart/form-data">
-            <h2>Add Product</h2>
+            <h2>Add Productt</h2>
             <div class="card-product">
                 <input type="text" name="nama" id="nama" placeholder="input nama produk......"><br><br>
                 <input type="number" name="harga" id="harga" placeholder="input harga......"><br><br>

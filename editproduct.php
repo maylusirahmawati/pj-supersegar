@@ -4,7 +4,7 @@ require_once 'db.php';
 $id = $_GET['id'];
 
 $nama= $_POST['nama'];
-$dekripsi = $_POST['deskripsi'];
+$deskripsi = $_POST['deskripsi'];
 $harga = $_POST['harga'];
 $gambar = $_FILES['gambar']['name']; 
 $picture = $_FILES['gambar'] ['tmp_name'];

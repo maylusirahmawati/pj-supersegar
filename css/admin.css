@@ -12,7 +12,7 @@
 .sidebar{
     width: 300px;
     height: 100vh;
-    background: #ff0000;
+    background: linear-gradient(#e7e9d8, #239dca);
     padding: 20px;
     position: fixed;
     left: 0;
@@ -20,11 +20,11 @@
 }
 
 .sidebar h2{
-    color: white;
+    color: #03695e;
     text-align: center;
     font-family: 'Times New Roman', Times, serif;
     margin-bottom: 30px;
-    font-size: 24px;
+    font-size: 40px;
 }
 
 .sidebar ul{
@@ -42,15 +42,10 @@
     padding: 12px 20px;
     border-radius: 8px;
     transition: 0.3s;
-    background: rgba(255,255,255,0.05);
+    background: rgba(109, 175, 95, 0.3);
 }
 
 .sidebar ul li a:hover{
     background: #239DCA;
     transform: translateX(5px);
-}
-
-.sidebar ul li a.active{
-    background: #239DCA;
-    font-weight: bold;
 }
