@@ -18,7 +18,7 @@
                 <li><a href="data_pinjam.php"><i class="bi bi-envelope"></i> Data Message</a></li>
                 <li><a href="landingpage.php"><i class="bi bi-house"></i> Kembali Ke Website</a></li>
 
-                <li><a href="?admin_logout=true" style="background-color: #03695e; margin-top: 50px;"><i class="bi bi-box-arrow-left"></i> Logout</a></li>
+                <li><a href="logout.php" style="background-color: #03695e; margin-top: 50px;"><i class="bi bi-box-arrow-left"></i> Logout</a></li>
             </ul>
         </div>
     </div>

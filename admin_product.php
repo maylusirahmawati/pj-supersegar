@@ -2,12 +2,10 @@
 require_once 'db.php';
 $sql = "SELECT * FROM product";
 $result= $conn->query($sql);  
-
 $produk = $result->fetch_assoc();
-
 ?>
 
-<?php include 'admin_sidebar.php'; ?>
+<?php include 'admin_dashboard.php'; ?>
 
 <!DOCTYPE html>
 <html lang="id">

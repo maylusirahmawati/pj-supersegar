@@ -11,9 +11,6 @@ $picture = $_FILES['gambar'] ['tmp_name'];
 $folder = "uploads/" . $gambar;
 move_uploaded_file($picture, $folder);
 
-
-//jika ada gambar yang diupload maka update gambar, jika tidak ada gambar yang diupload maka update tampa gambar
-
 if ($gambar) {
     $sql = "UPDATE product SET nama='$nama', deskripsi='$deskripsi', harga='$harga', gambar='$gambar' WHERE id=$id";
 } else {
