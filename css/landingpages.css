@@ -1,0 +1,454 @@
+* {
+    margin: 0;
+    padding: 0;
+    outline: none;
+    text-decoration: none;
+    align-items: center;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.4rem 7%;
+    background-color: #03695E;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 9999;
+}
+
+.navbar-logo{
+    display: flex;
+    text-align: center;
+    justify-content: center;
+} 
+
+.navbar-logo a {
+    color: white;
+    font-size: 18px;
+    font-weight: bold;
+    margin-left: 10px;
+    margin-top: 3px;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+.navbar .navbar-nav a {
+    color: white;
+    display: inline-block;
+    margin: 0 13px;
+    font-size: 15px;
+    position: relative;
+    text-decoration: none;
+    transition: 0.3s ease;
+}
+
+.navbar-nav {
+    margin-left: 45%;
+}
+
+.navbar-logo img {
+    display: inline-block;
+    text-align: center;
+    justify-content: center;
+    text-align: center;
+    border-radius: 55%;
+}
+
+.navbar .navbar-nav a::after {
+    content: "";
+    position: absolute;
+    width: 0%;
+    height: 2px;
+    left: 50%;
+    bottom: -5px;
+    background-color: #92e781;
+    transition: 0.3s ease;
+    transform: translateX(-50%);
+}
+
+.navbar .navbar-nav a:hover::after {
+    width: 100%;
+}
+
+.navbar .navbar-nav a:hover {
+    color: #a5c6db;
+}
+
+.navbar .nav-icon a {
+    color: white;
+    margin: 0 2px;
+    font-size: 18px;
+}
+
+.navbar .nav-icon a:hover {
+    color: #F9D0CE;
+}
+
+#hamburger-menu {
+    display: none;
+}
+
+/*hero section*/
+.hero {
+    min-height: 90vh;
+    display: flex;
+    align-items: center;
+    background-image: url('../picture/homepage.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    justify-content: center;    
+}
+
+.hero .content {
+    padding: 1.4rem 7%;
+    text-align: center;
+}
+
+.hero .content h1 {
+    font-family: "Karla";
+    color: white;
+    font-size: 9em;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+}
+
+.hero .content p {
+    font-size: 15px;
+    color: white;
+}
+
+.content a {
+    display: inline-block;
+    background: #239DCA;
+    border-radius: 15px;
+    box-shadow: 5px 7px 5px black;
+    color: white;
+    font-size: 15px;
+    padding: 10px 30px;    
+    margin-top: 20px;
+    font-weight: bold;
+}
+
+/*category*/
+
+.container {
+    max-width: 1200px;   
+    margin: 0 auto;     
+    padding: 0 20px;     
+}
+
+.categories h1 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 20px;
+    font-size: 40px;
+    color: #03695E;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+.categories span {
+    color: #239DCA;
+    margin-left: 10px;
+}
+
+.category-list {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 20px;
+}
+
+.category-title {
+    margin-top: 10px;
+    font-size: 13px;
+}
+
+.category-item img{
+    max-width: 90px;
+    border-radius: 55%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.promo-content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+    margin-top: 50px;
+}
+
+.promo-item-left {
+    width: 400px; 
+    height: 200px;
+    background-size: cover;
+    background-position: right center;
+    background-repeat: no-repeat;
+    display: flex;
+    padding: 20px;
+    border-radius: 5px;
+}
+
+.content-promo {
+    width: 220px;
+}
+
+.promo-item-left h4 {
+    font-size: 25px;
+}
+
+.content-promo span {
+    color: red;
+    font-size: 15px;
+    margin-left: 5px;
+}
+
+.content-promo a {
+    background-color: #03695E;
+    color: white;
+    padding: 10px 15px;
+    border-radius: 15px;
+    display: inline-block;
+    margin-top: 20px;
+}
+
+
+.promo-item-left:hover {
+    transform: scale(1.03);
+}
+
+/*product*/
+.product {
+    background: linear-gradient(#03695E, #6DAF5F);
+    margin-top: 50px;
+    padding-top: 50px;
+    color: white;
+}
+
+.title-product {
+    display: flex;
+    justify-content: space-between;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+.product h5 {
+    font-size: 15px;
+    font-weight: normal;
+}
+
+.title-product h1 {
+    font-size: 40px;
+}
+
+.title-product a {
+    color: white;
+    font-size: 18px;
+    background-color: #239DCA;
+    padding: 10px 15px;
+    border-radius: 5px;
+}
+
+.box-container {
+    display: grid;
+    padding-top: 10px;
+    gap: 25px;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    margin-top: 50px;
+}
+
+.box-product {
+    border: 1px solid black;
+    border-radius: 10px;
+    text-align: center;
+    background: #fff;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.08);
+    padding: 10px;
+    transition: 0.3s;
+    overflow: hidden; 
+}
+
+.box-product .discount {
+    display: flex;
+    text-align: start;
+    background: #239dca;
+    width: 30px;
+    padding: 5px;
+}
+
+.box-product .image {
+    position: relative; 
+    overflow: hidden;    
+    display: flex;
+    justify-content: center;
+}
+
+.box-product .image img {
+    width: 100%;
+    max-width: 150px;
+    height: 250px;
+    object-fit: cover;
+    transition: 0.2s;
+}
+
+.box-product:hover .image img {
+    transform: scale(1.1);
+}
+
+.box-product .icons-produk {
+    position: absolute;
+    bottom: -50px;
+    left: 0;
+    right: 0;
+    display: flex;  
+    background: rgba(35, 157, 202, 0.9); 
+    transition: 0.1s; 
+}
+
+.box-product:hover .icons-produk {
+    bottom: 0;
+}
+
+.box-product .icons-produk a {
+    flex: 1; 
+    height: 40px; 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 15px;
+    color: white;
+    text-decoration: none;
+    transition: 0.2s;
+}
+
+.box-product .icons-produk a:hover {
+    background: #1a7fa5; 
+}
+
+.box-product .name {
+    font-size: 17px;
+    margin: 15px 0 5px; 
+    font-family: "League Gothic", sans-serif;
+    font-weight: bold;
+    color: #003631;
+}
+
+.box-product .price {
+    font-size: 16px;
+    font-weight: bold;
+    color: #0EB106;
+}
+
+/*section about*/
+.about {
+    min-height: 120vh;
+    display: flex;
+    align-items: center;
+    position: relative;
+    justify-content: flex-end;    
+    background-image: url('../picture/about.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    padding-right: 5%; 
+}
+
+.about-content {
+    position: relative;
+    z-index: 2;
+    color: white;
+    max-width: 600px; 
+    text-align: right;
+    margin-bottom: 30%; 
+}
+
+.about-content h1 {
+    font-size: 40px;
+    text-align: right; 
+    margin-bottom: 20px;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+.about-content p {
+    text-align: right;
+    line-height: 1.6;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 18px;  
+}
+
+
+/*laptop*/
+@media (max-width: 1366px) {
+    html {
+        font-size: 75%;
+    }
+}
+
+/*tablet*/
+@media (max-width: 768px) {
+    html {
+        font-size: 62.5;
+    }
+
+    #hamburger-menu {
+        display: inline-block;
+    }
+
+    .navbar .navbar-nav {
+        position: absolute;
+        top: 100%;
+        right: -100%;
+        background: linear-gradient(#03695E, #e7e9d8, #239dca);
+        width: 40%;
+        height: 100vh;
+        transition: 0.3s;
+    }
+
+    .navbar .navbar-nav.active {
+        right: 0;
+    }
+
+    .navbar .navbar-nav a {
+        display: block;
+        margin: 20px;
+        font-size: 15px;
+    }
+
+}
+
+/*hp*/
+@media (max-width: 450px) {
+    html {
+        font-size: 55%;
+    }
+    
+    .about-img img {
+        width: 100px;
+        height: 80px;
+        margin-left: 20px;
+    }
+
+    .about-teks h3 {
+    margin-top: 2rem;
+    font-size: 2rem;
+    font-weight: 900;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: rgba(156, 175, 136, 1);
+    }
+
+    .about-teks p {
+        text-align: start;
+        font-size: 1.5rem;
+        font-family: "actor";
+        color: #F297A0;
+    }
+}
