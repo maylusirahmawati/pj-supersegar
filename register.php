@@ -55,6 +55,6 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 </body>
 </html>
 
-<?php
+<!-- <?php
 echo password_hash("admin123", PASSWORD_DEFAULT);
-?>
+?> -->

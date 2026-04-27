@@ -4,27 +4,48 @@ include 'db.php';
 
 if (isset($_POST['login'])) {
     
-    $email = $_POST['email'];
+    $email = mysqli_real_escape_string($conn, $_POST['email']);
     $password = $_POST['password'];
-    $email = mysqli_real_escape_string($conn, $email);
 
     $query = mysqli_query($conn, "SELECT * FROM users WHERE email='$email'");
     $data = mysqli_fetch_assoc($query);
 
-    if ($data && password_verify($password, $data['password'])) {
-        $_SESSION['login'] = true;
-        $_SESSION['role'] = $data['role'];
-        $_SESSION['username'] = $data['username'];
+    if ($data) {
 
-        if ($data['role'] == 'admin') {
-            header("Location: admin_dashboard.php");
+        if (password_verify($password, $data['password'])) {
+
+            // ✅ SESSION LENGKAP
+            $_SESSION['login'] = true;
+            $_SESSION['user_id'] = $data['id'];
+            $_SESSION['username'] = $data['username'];
+            $_SESSION['email'] = $data['email'];
+            $_SESSION['role'] = $data['role'];
+
+            if ($data['role'] == 'admin') {
+                echo "<script>
+                    alert('Login Admin Berhasil!');
+                    location.href = 'admin_dashboard.php'; 
+                </script>";
+            } else {
+                echo "<script>
+                    alert('Login Berhasil!');
+                    location.href = 'landingpage.php'; 
+                </script>";
+            }
             exit;
+
         } else {
-            header("Location: landingpage.php");
-            exit;
+            echo "<script>
+                alert('Password salah!');
+                location.href = 'login.php';
+            </script>";
         }
+
     } else {
-        $error = "Login gagal! Email atau password salah.";
+        echo "<script>
+            alert('Email tidak ditemukan.');
+            location.href = 'login.php';
+        </script>";
     }
 }
 ?>
