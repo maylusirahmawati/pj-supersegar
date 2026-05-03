@@ -29,7 +29,7 @@ if (isset($_POST['login'])) {
             } else {
                 echo "<script>
                     alert('Login Berhasil!');
-                    location.href = 'landingpage.php'; 
+                    location.href = 'homepage.php'; 
                 </script>";
             }
             exit;

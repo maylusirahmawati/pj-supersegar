@@ -1,8 +1,13 @@
 :root {
-    --mint-julep: #F1E4C3;   
-    --deep-green: #03695E;   
-    --outer-space: #323C3B;    
+    --primary-dark: #03695E;
+    --primary-light: #6DAF5F;
+    --accent-blue: #239DCA;
+    --soft-blue: #a5c6db;
+    --bg-light: #e7e9d8;
     --white: #ffffff;
+    --black: #1a1a1a;
+    --danger-red: #d9534f;
+    --shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
 }
 
 * {
@@ -19,7 +24,7 @@ body {
 .kontak-container {
     margin-top: 5%;
     padding: 3rem 7% 2rem;
-    background-color: var(--deep-green);
+    background-color: var(--primary-dark);
 }
 
 .footer-wrapper {
@@ -54,7 +59,7 @@ body {
 
 .footer-logo span {
     font-size: 20px;
-    color: var(--mint-julep);
+    color: var(--bg-light);
 }
 
 .footer-links {
@@ -96,7 +101,7 @@ body {
 
 .footer-caption {
     text-align: center;
-    background-color: white;
+    background-color:  var(--accent-blue);
     color: black;
     padding: 15px;
     font-family: 'Times New Roman', Times, serif;
