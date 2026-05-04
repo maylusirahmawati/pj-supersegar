@@ -30,14 +30,14 @@ body {
 .footer-wrapper {
     display: flex;
     justify-content: space-between;
-    gap: 60px;
+    gap: 50px;
     flex-wrap: wrap;
     color: var(--white);
 }
 
 .footer-left {
     flex: 1;
-    min-width: 250px;
+    min-width: 270px;
 }
 
 .footer-left p {
@@ -63,15 +63,13 @@ body {
 }
 
 .footer-links {
-    flex: 2;
     display: flex;
     justify-content: space-between;
-    gap: 60px;
-    flex-wrap: wrap;
+    gap: 20px;
 }
 
 .footer-col {
-    min-width: 180px;
+    min-width: 110px;
 }
 
 .footer-col h3 {

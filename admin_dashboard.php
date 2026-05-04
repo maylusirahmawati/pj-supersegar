@@ -12,10 +12,10 @@
         <div class="sidebar">
             <h2>Admin Panel</h2>
             <ul>
-                <li><a href="admin.php" class="active"><i class="bi bi-people"></i> Data Pelanggan</a></li>
+                <li><a href="admin_users.php" class="active"><i class="bi bi-people"></i> Data Pelanggan</a></li>
                 <li><a href="admin_product.php" class="active"><i class="bi bi-bag-heart-fill"></i> Kelola Product</a></li>
-                <li><a href="data_pinjam.php"><i class="bi bi-cart"></i> Data Orders</a></li>
-                <li><a href="data_pinjam.php"><i class="bi bi-envelope"></i> Data Message</a></li>
+                <li><a href="#"><i class="bi bi-cart"></i> Data Orders</a></li>
+                <li><a href="admin_message.php"><i class="bi bi-envelope"></i> Data Message</a></li>
                 <li><a href="landingpage.php"><i class="bi bi-house"></i> Kembali Ke Website</a></li>
 
                 <li><a href="logout.php" style="background-color: #03695e; margin-top: 50px;"><i class="bi bi-box-arrow-left"></i> Logout</a></li>
