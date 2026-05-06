@@ -106,4 +106,18 @@ h2 {
     font-size: 18px;
 }
 
+.box-users {
+    border: 2px solid #003631;
+    border-radius: 10px;
+    padding: 10px;
+    background-color: #239dca;
+    color: #fff;
+    margin-top: 10px;
+}
+
+.box-users a {
+    text-decoration: none;
+    color: red;
+}
+
 

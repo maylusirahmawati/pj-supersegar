@@ -10,6 +10,7 @@ $user_id = $_SESSION['user_id'] ?? null;
 //     header("Location: login.php");
 //     exit;
 // }
+
 ?>
 
 <!DOCTYPE html>
@@ -36,9 +37,9 @@ $user_id = $_SESSION['user_id'] ?? null;
             </div>
 
             <div class="navbar-nav">
-                <a href="#product"><i class="bi bi-bag-fill"></i> Product</a>
                 <a href="#about"><i class="bi bi-info-square-fill"></i> About Us</a>
-                <a href="#message"><i class="bi bi-telephone-fill"></i> Message</a>
+                <a href="#product"><i class="bi bi-bag-fill"></i> Product</a>
+                <a href="#review"><i class="bi bi-telephone-fill"></i> Review</a>
             </div>
 
             <div class="nav-icon">
@@ -257,7 +258,7 @@ $user_id = $_SESSION['user_id'] ?? null;
             </div>
         </section>
 
-        <div class="reviews" id="reviews">
+        <div class="reviews" id="review">
             <div class="container">
                 <h1>Customer Reviews</h1>
                 <div class="box-container">

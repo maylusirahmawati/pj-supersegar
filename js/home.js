@@ -28,46 +28,46 @@ const hiddenElements = document.querySelectorAll('.categories, .services, .messa
 hiddenElements.forEach((el) => observer.observe(el));
 
 
-    // document.addEventListener('DOMContentLoaded', () => {
-    //     const searchInput = document.getElementById('search-input');
-    //     const searchBtn = document.getElementById('search-btn');
+document.addEventListener('DOMContentLoaded', () => {
+    const searchInput = document.getElementById('search-input');
+    const searchBtn = document.getElementById('search-btn');
         
-    //     // Fungsi utama untuk memfilter produk
-    //     const filterProducts = () => {
-    //         const searchTerm = searchInput.value.toLowerCase().trim();
-    //         const products = document.querySelectorAll('.box-product'); // Mengambil semua kartu produk
+        // Fungsi utama untuk memfilter produk
+    const filterProducts = () => {
+        const searchTerm = searchInput.value.toLowerCase().trim();
+        const products = document.querySelectorAll('.box-product'); // Mengambil semua kartu produk
 
-    //         products.forEach(product => {
-    //             // Mengambil teks nama produk di dalam class .name
-    //             const productName = product.querySelector('.name').innerText.toLowerCase();
+        products.forEach(product => {
+            // Mengambil teks nama produk di dalam class .name
+            const productName = product.querySelector('.name').innerText.toLowerCase();
                 
-    //             if (productName.includes(searchTerm)) {
-    //                 // Jika cocok, tampilkan produk dengan animasi halus
-    //                 product.style.display = ""; 
-    //                 product.style.opacity = "1";
-    //                 product.style.transform = "scale(1)";
-    //             } else {
-    //                 // Jika tidak cocok, sembunyikan produk
-    //                 product.style.display = "none";
-    //                 product.style.opacity = "0";
-    //                 product.style.transform = "scale(0.8)";
-    //             }
-    //         });
-    //     };
+            if (productName.includes(searchTerm)) {
+                // Jika cocok, tampilkan produk dengan animasi halus
+                product.style.display = ""; 
+                product.style.opacity = "1";
+                product.style.transform = "scale(1)";
+            } else {
+                // Jika tidak cocok, sembunyikan produk
+                product.style.display = "none";
+                product.style.opacity = "0";
+                product.style.transform = "scale(0.8)";
+            }
+        });
+    };
 
-    //     // 1. Jalankan fungsi saat user mengetik (Real-time)
-    //     searchInput.addEventListener('input', filterProducts);
+        // 1. Jalankan fungsi saat user mengetik (Real-time)
+    searchInput.addEventListener('input', filterProducts);
 
-    //     // 2. Jalankan fungsi saat tombol icon search diklik
-    //     searchBtn.addEventListener('click', (e) => {
-    //         e.preventDefault(); // Mencegah form reload jika di dalam tag <form>
-    //         filterProducts();
-    //     });
+        // 2. Jalankan fungsi saat tombol icon search diklik
+    searchBtn.addEventListener('click', (e) => {
+        e.preventDefault(); // Mencegah form reload jika di dalam tag <form>
+        filterProducts();
+    });
 
-    //     // 3. Opsional: Jalankan fungsi saat menekan tombol 'Enter'
-    //     searchInput.addEventListener('keypress', (e) => {
-    //         if (e.key === 'Enter') {
-    //             filterProducts();
-    //         }
-    //     });
-    // });
+        // 3. Opsional: Jalankan fungsi saat menekan tombol 'Enter'
+    searchInput.addEventListener('keypress', (e) => {
+        if (e.key === 'Enter') {
+            filterProducts();
+        }
+    });
+});

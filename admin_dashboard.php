@@ -12,7 +12,7 @@
         <div class="sidebar">
             <h2>Admin Panel</h2>
             <ul>
-                <li><a href="admin.php" class="active"><i class="bi bi-people"></i> Data Pelanggan</a></li>
+                <li><a href="admin_users.php" class="active"><i class="bi bi-people"></i> Data Pelanggan</a></li>
                 <li><a href="admin_product.php" class="active"><i class="bi bi-bag-heart-fill"></i> Kelola Product</a></li>
                 <li><a href="data_pinjam.php"><i class="bi bi-cart"></i> Data Orders</a></li>
                 <li><a href="data_pinjam.php"><i class="bi bi-envelope"></i> Data Message</a></li>

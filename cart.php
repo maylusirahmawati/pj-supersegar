@@ -60,6 +60,6 @@ $result= $conn->query($sql);
         </div>
     </main>
 
-    <script src="js/produk.js"></script>
+    <script src="js/search.js"></script>
 </body>
 </html>
