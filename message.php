@@ -12,11 +12,12 @@ if (!isset($_SESSION['user_id'])) {
 
 $user_id = $_SESSION['user_id'];
 $nama = $_POST['nama'];
-$message = $_POST['message'];
+$message = $_POST['message'] ?? '';
+$rating = isset($_POST['rating']) ? (int)$_POST['rating'] : 0;
 
-$sql = "INSERT INTO message (user_id, nama, message) VALUES (?, ?, ?)";
+$sql = "INSERT INTO message (user_id, nama, message, rating) VALUES (?, ?, ?, ?)";
 $stmt = $conn->prepare($sql);
-$stmt->bind_param("iss", $user_id, $nama, $message);
+$stmt->bind_param("issi", $user_id, $nama, $message, $rating);
 
 if ($stmt->execute()) {
     echo "<script>

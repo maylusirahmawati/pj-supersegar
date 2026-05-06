@@ -39,5 +39,9 @@ $users = $result->fetch_assoc();
         </div>
     </section>
 </body>
+<<<<<<< HEAD
 </html>
 
+=======
+</html>
+>>>>>>> c39d1b556227b733288175de80e9b7ce83182c1f

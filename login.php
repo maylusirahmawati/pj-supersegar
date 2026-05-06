@@ -54,16 +54,39 @@ if (isset($_POST['login'])) {
 <html>
 <head>
     <title>Login Page</title>
+    <link rel="stylesheet" href="css/logis.css">
 </head>
 <body>
-<h2>Login</h2>
-<form method="POST">
-    <label>Email</label><br>
-    <input type="email" name="email" placeholder="Masukkan email..." required><br><br>
-    <label>Password</label><br>
-    <input type="password" name="password" placeholder="Masukan Password" required><br><br>
-    <button type="submit" name="login">LOGIN</button>
-    <p>Don't have any accout? <a href="register.php">Sign Up</a></p>
-</form>
+    <header> 
+        <nav class="navbar">
+            <div class="navbar-logo">
+                <img style="width: 30px; height: 30px;" src="picture/logo.png" alt="">
+                <a href="">SUPERSEGAR</a>
+            </div>
+        </nav>
+    </header>
+            
+        <div class="container">
+            <div class="card" style="height: 350px;">
+                <h2>Login</h2>
+                
+                <form method="POST">
+                    <label>Email</label>
+                    <input type="email" name="email" placeholder="Masukkan email..." required><br><br>
+                    <label>Password</label>
+                    <input type="password" name="password" placeholder="Masukan Password" required><br><br>
+                    <button class="btn" type="submit" name="login">LOGIN</button>
+                    <p class="info">Don't have any accout? <a href="register.php">Sign Up</a></p>
+                </form>
+            </div>
+        
+            <!-- IMAGE -->
+            <div class="image-section">
+                <img src="picture/login.png" alt="">
+            </div>
+          </div>
+        </div>
+                
 </body>
 </html>
+

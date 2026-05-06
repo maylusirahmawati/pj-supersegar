@@ -40,6 +40,10 @@ $user_id = $_SESSION['user_id'] ?? null;
                 <a href="#about"><i class="bi bi-info-square-fill"></i> About Us</a>
                 <a href="#product"><i class="bi bi-bag-fill"></i> Product</a>
                 <a href="#review"><i class="bi bi-telephone-fill"></i> Review</a>
+<<<<<<< HEAD
+=======
+                <a href="#message"><i class="bi bi-telephone-fill"></i> Contact Us</a>
+>>>>>>> c39d1b556227b733288175de80e9b7ce83182c1f
             </div>
 
             <div class="nav-icon">
@@ -258,58 +262,55 @@ $user_id = $_SESSION['user_id'] ?? null;
             </div>
         </section>
 
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> c39d1b556227b733288175de80e9b7ce83182c1f
         <div class="reviews" id="review">
             <div class="container">
                 <h1>Customer Reviews</h1>
-                <div class="box-container">
+
+                <div class="scroll-container">
+                    <?php
+                    $query_review = mysqli_query($conn, "SELECT * FROM message ORDER BY id_message DESC LIMIT 15");
+
+                    while($row = mysqli_fetch_assoc($query_review)):
+                    ?>
+
                     <div class="box-reviews">
+
+                        <!-- ⭐ BINTANG -->
                         <div class="stars">
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
+                            <?php 
+                            $rating = (int)$row['rating'];
+                            for($i = 1; $i <= 5; $i++) {
+                                echo $i <= $rating 
+                                    ? '<i class="bi bi-star-fill"></i>' 
+                                    : '<i class="bi bi-star"></i>';
+                            }
+                            ?>
                         </div>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Perferendis natus saepe sapiente odio sint fugit odit iusto non magni veritatis, ab quaerat, voluptatum totam nesciunt placeat, eum officia. Neque, adipisci.</p>
+
+                        <!-- 💬 TEXT -->
+                        <p class="review-text">
+                            <?php echo htmlspecialchars($row['message']); ?>
+                        </p>
+
+                        <!-- 👤 USER -->
                         <div class="user">
-                            <img src="picture/person.jpg" alt="">
-                            <h3>John Doe</h3>
+                            <img src="https://ui-avatars.com/api/?name=<?php echo urlencode($row['nama']); ?>" alt="">
+                            <h3><?php echo htmlspecialchars($row['nama']); ?></h3>
                         </div>
+
+                        <!-- ❝ QUOTE -->
                         <span class="fas fa-quote-right"></span>
+
                     </div>
-                    <div class="box-reviews">
-                        <div class="stars">
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                        </div>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Perferendis natus saepe sapiente odio sint fugit odit iusto non magni veritatis, ab quaerat, voluptatum totam nesciunt placeat, eum officia. Neque, adipisci.</p>
-                        <div class="user">
-                            <img src="picture/person.jpg" alt="">
-                            <h3>John Doe</h3>
-                        </div>
-                        <span class="fas fa-quote-right"></span>
-                    </div>
-                    <div class="box-reviews">
-                        <div class="stars">
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                        </div>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Perferendis natus saepe sapiente odio sint fugit odit iusto non magni veritatis, ab quaerat, voluptatum totam nesciunt placeat, eum officia. Neque, adipisci.</p>
-                        <div class="user">
-                            <img src="picture/person.jpg" alt="">
-                            <h3>John Doe</h3> <br>
-                        </div>
-                        <span class="fas fa-quote-right"></span>
-                    </div>
+
+                    <?php endwhile; ?>
                 </div>
             </div>
-
         </div>
 
         <!-- <section class="message" id="message">
@@ -341,9 +342,7 @@ $user_id = $_SESSION['user_id'] ?? null;
         </section>
     </main>
 
-        
-
-
+                           
     <?php include 'footer.php'; ?>
 
     <script src="js/home.js"></script>

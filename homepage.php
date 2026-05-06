@@ -14,13 +14,65 @@ if(!isset($user_id)){
    header('location:login.php');
 }
 
+// Cegah cache (biar tombol back nggak bisa)
+header("Cache-Control: no-cache, no-store, must-revalidate");
+header("Pragma: no-cache");
+header("Expires: 0");
+
+// Cek login
+if (!isset($_SESSION['user_id'])) {
+    header("Location: landingpage.php?error=login");
+    exit;
+}
+
 ?>
+
+<!-- NITIP BENTAR BUAT RATING BINTANG-->
+
+<style>
+    /* Styling Rating Bintang Interaktif */
+    .star-rating {
+        display: flex;
+        flex-direction: row-reverse; /* Supaya hover dari kiri ke kanan lebih mudah diatur */
+        justify-content: flex-end;
+        gap: 5px;
+        margin-bottom: 15px;
+    }
+
+    .star-rating input {
+        display: none; /* Sembunyikan radio button asli */
+        position: absolute;
+        z-index: 10;
+    }
+
+    .star-rating label {
+        font-size: 30px;
+        position: relative;
+        z-index: 5;
+        color: #ccc; /* Warna bintang kosong */
+        cursor: pointer;
+        transition: color 0.2s;
+    }
+
+    /* Saat di-hover atau di-check, bintang jadi kuning */
+    .star-rating input:checked ~ label,
+    .star-rating label:hover,
+    .star-rating label:hover ~ label {
+        color: #ffcc00;
+    }
+</style>
+
+
 
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+<<<<<<< HEAD
     <link rel="stylesheet" href="css/homepages.css">
+=======
+    <link rel="stylesheet" href="css/homepagesss.css">
+>>>>>>> c39d1b556227b733288175de80e9b7ce83182c1f
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
@@ -151,10 +203,26 @@ if(!isset($user_id)){
                 <div class="message-bg">
                     <div class="message-content">
                         <h2>QUESTION ABOUT YOUR <span>ORDER?</span></h2>
+<<<<<<< HEAD
                         <h5>MESSAGE US AND WE'LL REPLY BEFORE IT <span>Mealts!</span></h5>
                     </div>
                     <div class="wrapper">
                         <form action="message.php" method="post" enctype="multipart/form-data">
+=======
+                        <h5>MESSAGE US AND WE'LL REPLY BEFORE IT <span> Mealts!</span></h5>
+                    </div>
+                    <div class="wrapper">
+                        <form action="message.php" method="post" enctype="multipart/form-data">
+                            <div class="rating-container">
+                                <div class="star-rating">
+                                    <input type="radio" id="s5" name="rating" value="5"><label for="s5" class="bi bi-star-fill"></label>
+                                    <input type="radio" id="s4" name="rating" value="4"><label for="s4" class="bi bi-star-fill"></label>
+                                    <input type="radio" id="s3" name="rating" value="3"><label for="s3" class="bi bi-star-fill"></label>
+                                    <input type="radio" id="s2" name="rating" value="2"><label for="s2" class="bi bi-star-fill"></label>
+                                    <input type="radio" id="s1" name="rating" value="1"><label for="s1" class="bi bi-star-fill"></label>
+                                </div>
+                            </div>
+>>>>>>> c39d1b556227b733288175de80e9b7ce83182c1f
                             <input type="text" name="nama" placeholder="username"
                                 value="<?php echo $_SESSION['username'] ?? ''; ?>" readonly> <br> <br>
                             <textarea name="message" id="message" placeholder="input message...."></textarea> <br> <br>
@@ -169,11 +237,14 @@ if(!isset($user_id)){
     <?php include 'footer.php'; ?>
     
     <script src="js/search.js"></script>
+<<<<<<< HEAD
     <script>
         window.history.pushState(null, "", window.location.href);
         window.onpopstate = function () {
             window.location.href = "login.php";
         };
     </script>
+=======
+>>>>>>> c39d1b556227b733288175de80e9b7ce83182c1f
 </body>
 </html>
